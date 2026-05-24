@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1e1e1e, #121212);
+    color: #e5e5e5;
+}
+
+.index-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px;
+}
+
+.index-container {
+    width: 100%;
+    max-width: 980px;
+}
+
+.index-header {
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.index-header h1 {
+    margin: 0 0 10px;
+    font-size: 44px;
+    color: #00aaff;
+}
+
+.index-header p {
+    margin: 0;
+    color: #b9c0c7;
+    font-size: 18px;
+}
+
+.index-cards {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.index-card {
+    width: 100%;
+    max-width: 420px;
+    background: #2b2b2b;
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 18px;
+    padding: 30px 24px;
+    text-align: center;
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.35);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.index-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 40px rgba(0, 170, 255, 0.18);
+}
+
+.index-card h2 {
+    margin: 0 0 12px;
+    color: #00aaff;
+    font-size: 28px;
+}
+
+.index-card p {
+    margin: 0 0 22px;
+    color: #cfd4d9;
+    line-height: 1.5;
+}
+
+.index-btn {
+    display: inline-block;
+    min-width: 180px;
+    padding: 12px 20px;
+    margin: 6px;
+    border-radius: 12px;
+    text-decoration: none;
+    background: linear-gradient(90deg, #00aaff, #0088cc);
+    color: #fff;
+    font-weight: 600;
+    transition: .25s ease;
+}
+
+.index-btn:hover {
+    box-shadow: 0 0 12px rgba(0, 170, 255, 0.45);
+    transform: translateY(-1px);
+}
+
+.index-btn.secondary {
+    background: linear-gradient(90deg, #4a4a4a, #2f2f2f);
+}
+
+.index-btn.secondary:hover {
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.12);
+}
+
+@media (max-width: 700px) {
+    .index-header h1 {
+        font-size: 34px;
+    }
+
+    .index-header p {
+        font-size: 16px;
+    }
+
+    .index-card {
+        max-width: 100%;
+    }
+}
