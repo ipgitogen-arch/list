@@ -1,0 +1,138 @@
+/* Вспомогательные стили для модулей и диалогов */
+.dialogs-wrapper {
+    display:flex;
+    min-height:100vh;
+    background:#1e1e1e;
+    color:#e5e5e5;
+    font-family:"Segoe UI",Tahoma,Geneva,Verdana,sans-serif;
+}
+
+.friends-list {
+    width:250px;
+    background:#2b2b2b;
+    padding:20px;
+    overflow-y:auto;
+}
+
+.friends-list h2 { 
+    color:#00aaff; 
+    text-align:center; 
+    margin-bottom:10px; 
+}
+
+.friends-list input { 
+    width:100%; 
+    padding:8px; 
+    margin-bottom:10px; 
+    border-radius:8px; 
+    border:none; 
+}
+
+.friends-list ul { 
+    list-style:none; 
+    padding:0; 
+    margin:0; 
+}
+
+.friends-list li { 
+    margin-bottom:8px; 
+}
+
+.friends-list a { 
+    display:flex; 
+    align-items:center; 
+    text-decoration:none; 
+    color:#fff; 
+    padding:5px; 
+    border-radius:8px; 
+    transition:0.2s; 
+}
+
+.friends-list a:hover { 
+    background:#00aaff33; 
+}
+
+.friend-avatar { 
+    width:36px; 
+    height:36px; 
+    border-radius:50%; 
+    margin-right:8px; 
+    object-fit:cover; 
+}
+
+.chat-block { 
+    flex:1; 
+    display:flex; 
+    flex-direction:column; 
+    padding:20px; 
+}
+
+.chat-messages { 
+    flex:1; 
+    overflow-y:auto; 
+    margin-bottom:10px; 
+}
+
+.message { 
+    display:flex; 
+    margin-bottom:10px; 
+}
+
+.message.sent { 
+    flex-direction:row-reverse; 
+}
+
+.msg-avatar { 
+    width:36px; 
+    height:36px; 
+    border-radius:50%; 
+    object-fit:cover; 
+    margin:0 8px; 
+}
+
+.msg-content { 
+    max-width:70%; 
+    background:#333; 
+    padding:10px; 
+    border-radius:10px; 
+}
+
+.message.sent .msg-content { 
+    background:#0088cc; 
+    color:#fff; 
+}
+
+.msg-image { 
+    max-width:100%; 
+    border-radius:8px; 
+    margin-bottom:5px; 
+}
+
+.chat-form { 
+    display:flex; 
+    gap:8px; 
+}
+
+.chat-form input[type=text] { 
+    flex:1; 
+    padding:8px; 
+    border-radius:8px; 
+    border:none; 
+}
+
+.chat-form input[type=file] {}
+
+.chat-form button { 
+    padding:8px 12px; 
+    border-radius:8px; 
+    border:none; 
+    background:#00aaff; 
+    color:#fff; 
+    font-weight:600; 
+    cursor:pointer; 
+    transition:0.3s; 
+}
+
+.chat-form button:hover { 
+    background:#0088cc; 
+}

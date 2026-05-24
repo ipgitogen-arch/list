@@ -1,0 +1,94 @@
+/* pwa-fix.css - исправление отступов для PWA */
+/* Стиль как в вашем проекте */
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Базовые отступы для всех страниц с шапкой */
+.header,
+.profile-header,
+.content-header,
+.playlist-header,
+.chat-header,
+.support-header,
+.channel-header,
+.navbar,
+.dialogs-header,
+.messages-header {
+    padding-top: max(12px, env(safe-area-inset-top)) !important;
+    padding-left: max(20px, env(safe-area-inset-left)) !important;
+    padding-right: max(20px, env(safe-area-inset-right)) !important;
+}
+
+/* Для страниц с формой ввода (прижимаем к низу) */
+.input-area,
+.message-form,
+.chat-input-area {
+    padding-bottom: max(12px, env(safe-area-inset-bottom)) !important;
+    padding-left: max(20px, env(safe-area-inset-left)) !important;
+    padding-right: max(20px, env(safe-area-inset-right)) !important;
+}
+
+/* Для PWA режима (установленное приложение) */
+@media (display-mode: standalone), (display-mode: fullscreen) {
+    body {
+        padding-top: 0 !important;
+        margin-top: 0 !important;
+    }
+    
+    /* Шапка - выше */
+    .header,
+    .profile-header,
+    .content-header,
+    .playlist-header,
+    .chat-header,
+    .support-header,
+    .channel-header,
+    .navbar,
+    .dialogs-header,
+    .messages-header {
+        padding-top: max(4px, env(safe-area-inset-top)) !important;
+        margin-top: 0 !important;
+    }
+    
+    /* Убираем лишние отступы у контейнеров */
+    .container,
+    .auth-container,
+    .messages,
+    .dialogs-list {
+        padding-top: 0 !important;
+    }
+    
+    /* Фикс для модальных окон */
+    .modal-overlay,
+    .modal,
+    .notifications-dropdown,
+    .story-view-modal {
+        padding-top: env(safe-area-inset-top);
+    }
+}
+
+/* Для iPhone с Dynamic Island - минимальный отступ */
+@supports (padding-top: env(safe-area-inset-top)) {
+    .header,
+    .channel-header,
+    .navbar {
+        padding-top: max(4px, env(safe-area-inset-top)) !important;
+    }
+}
+
+/* Для страниц без шапки */
+.auth-container,
+.login-container,
+.register-container {
+    padding-top: max(20px, env(safe-area-inset-top));
+    padding-bottom: max(20px, env(safe-area-inset-bottom));
+}
+
+/* Плавная прокрутка для iOS */
+.messages,
+.dialogs-list,
+.notifications-list {
+    -webkit-overflow-scrolling: touch;
+}
